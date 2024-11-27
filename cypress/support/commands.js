@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login', (username, password) => {
+    cy.get('#user_login').type(username);
+    cy.get('#user_password').type(password);
+    cy.get('#user_remember_me').click();
+    cy.get('.btn-primary').click();
+})
+
+Cypress.Commands.add('payBills', (amount, date, description) => {
+    cy.get('#sp_amount').type(amount);
+    cy.get('#sp_date').type(date)
+    cy.get('#sp_description').type(description);
+    cy.get('#pay_saved_payees').click()
+    cy.get('#alert_content').should('contain.text', 'The payment was successfully submitted.');
+})

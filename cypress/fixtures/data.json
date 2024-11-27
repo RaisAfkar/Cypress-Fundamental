@@ -1,9 +1,12 @@
 {
-  "username": "ZeroBankUsername",
-  "password": "ZeroBankPassword",
+  "username": "username",
+  "password": "password",
   "usersaucedemo": "standard_user",
   "passwordsaucedemo": "secret_sauce",
   "firstname": "Rais",
   "lastname": "afkar",
-  "postalcode": "12345"
+  "postalcode": "12345",
+  "amount": "12",
+  "date": "2024-10-01",
+  "description": "bayar"
 }
